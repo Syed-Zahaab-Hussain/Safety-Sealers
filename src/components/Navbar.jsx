@@ -116,7 +116,7 @@ const Navbar = () => {
         >
           <Flex alignItems="center" gap={1}>
             {links.map((link, index) => (
-              <Box key={index} position="relative">
+              <Box key={index} position="relative" textTransform="capitalize">
                 {link.subLinks ? (
                   <Menu>
                     <MenuButton
@@ -175,14 +175,18 @@ const Navbar = () => {
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
-            <VStack align="stretch" spacing={4}>
+            <VStack align="stretch" spacing={4} textTransform="capitalize">
               {links.map((link, index) => (
                 <Accordion key={index} allowToggle>
                   <AccordionItem border="none">
                     {link.subLinks ? (
                       <>
                         <AccordionButton>
-                          <Box flex="1" textAlign="left">
+                          <Box
+                            flex="1"
+                            textAlign="left"
+                            textTransform="capitalize"
+                          >
                             {link.label}
                           </Box>
                           <AccordionIcon />

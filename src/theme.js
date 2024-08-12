@@ -11,6 +11,8 @@ const theme = extendTheme({
       main: "#002e5b",
       white: "#ffffff",
       alt: "#33587c",
+      button: "#0088cc",
+      buttonHover: "#006599",
     },
   },
   fonts: {
