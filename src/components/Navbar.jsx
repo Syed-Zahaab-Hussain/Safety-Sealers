@@ -44,29 +44,7 @@ const links = [
   },
   {
     label: "products",
-    path: "/products",
-    subLinks: [
-      {
-        label: "elastogrip membranes",
-        path: "/products/elastogrip-membranes",
-      },
-      {
-        label: "plastogrip membranes",
-        path: "/products/plastogrip-membranes",
-      },
-      {
-        label: "protection board",
-        path: "/products/protection-board",
-      },
-      {
-        label: "primer grip",
-        path: "/products/primer-grip",
-      },
-      {
-        label: "joint sealant",
-        path: "/products/joint-sealant",
-      },
-    ],
+    path: "/safety-sealers/products",
   },
   { label: "services", path: "/services" },
   { label: "new & events", path: "/new&events" },
@@ -117,7 +95,6 @@ const Navbar = () => {
             variant="outline"
             color="text.divider"
             fontSize="1.5rem"
-            // background="background.main"
           />
         )}
       </Flex>
