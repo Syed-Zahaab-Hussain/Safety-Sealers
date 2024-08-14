@@ -8,7 +8,6 @@ import {
   Flex,
   Heading,
   HStack,
-  Icon,
   Image,
   SimpleGrid,
   Stack,
@@ -17,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
-import { useState } from "react";
 import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
@@ -69,20 +67,20 @@ const differenceArray = [
 const beforeAfterImages = [
   {
     id: 1,
-    before: "/before & after/image 1 before.webp",
-    after: "/before & after/image 1 after.webp",
+    before: "src/assets/comparisionImages/image-1-before.webp",
+    after: "src/assets/comparisionImages/image-1-after.webp",
     title: "Living Room Renovation",
   },
   {
     id: 2,
-    before: "/before & after/image 2 before.webp",
-    after: "/before & after/image 2 after.webp",
+    before: "src/assets/comparisionImages/image-2-before.webp",
+    after: "src/assets/comparisionImages/image-2-after.webp",
     title: "Living Room Renovation",
   },
   {
     id: 3,
-    before: "/before & after/image 3 before.webp",
-    after: "/before & after/image 3 after.webp",
+    before: "src/assets/comparisionImages/image-3-before.webp",
+    after: "src/assets/comparisionImages/image-3-after.webp",
     title: "Living Room Renovation",
   },
 ];

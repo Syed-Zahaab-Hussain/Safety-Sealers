@@ -23,9 +23,11 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
+  Icon,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { EmailIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import Card from "./NavLocationCard";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import logo from "/logo.png";
 
 const links = [
@@ -77,6 +79,8 @@ const links = [
 const Navbar = () => {
   const [isMobile] = useMediaQuery("(min-width: 60em)");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const textSize = useBreakpointValue({ base: "sm", md: "md" });
+  const iconSize = useBreakpointValue({ base: 4, md: 5 });
 
   const handleDrawerOpen = () => setIsDrawerOpen(true);
   const handleDrawerClose = () => setIsDrawerOpen(false);
@@ -92,7 +96,18 @@ const Navbar = () => {
         <Image src={logo} alt="Logo" width="150px" />
         {isMobile && (
           <Box flex={1} display="flex" justifyContent="center">
-            <Card />
+            <Flex alignItems="flex-start" gap={2}>
+              <Box>
+                <Icon as={FaMapMarkerAlt} color="#6c98e1" boxSize={iconSize} />
+              </Box>
+              <Box color="gray.600">
+                <Text fontWeight="bold" fontSize={textSize}>
+                  Head Office
+                </Text>
+                <Text fontSize={textSize}>56/38-C, Jinnah Town, Quetta</Text>
+                <Text fontSize={textSize}>Phone: +92 313 6781867</Text>
+              </Box>
+            </Flex>
           </Box>
         )}
         {!isMobile && (
