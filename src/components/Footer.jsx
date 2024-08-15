@@ -43,7 +43,7 @@ const Footer = () => {
             <VStack align="flex-start" spacing={2}>
               <HStack>
                 <FaMapMarkerAlt />
-                <Text>Quetta</Text>
+                <Text>56/38-C, Jinnah Town,Quetta</Text>
               </HStack>
               <HStack>
                 <PhoneIcon />

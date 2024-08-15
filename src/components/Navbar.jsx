@@ -25,37 +25,40 @@ import {
   AccordionIcon,
   Icon,
   useBreakpointValue,
+  Divider,
 } from "@chakra-ui/react";
 import { EmailIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import logo from "/logo.png";
+import logo from "/Nav-logo.png";
 
 const links = [
   { label: "home", path: "/" },
   {
     label: "about us",
-    path: "/about-us",
+    path: "/safety-sealers/about-us",
     subLinks: [
-      { label: "the group", path: "/about-us/the-group" },
-      { label: "company profile", path: "/about-us/company-profile" },
-      { label: "Enlistments", path: "/about-us/Enlistments" },
-      { label: "certification", path: "/about-us/certification" },
+      { label: "the group", path: "/safety-sealers/about-us/the-group" },
+      {
+        label: "company profile",
+        path: "/safety-sealers/about-us/company-profile",
+      },
+      // { label: "Enlistments", path: "/safety-sealers/about-us/Enlistments" },
+      // {
+      //   label: "certification",
+      //   path: "/safety-sealers/about-us/certification",
+      // },
     ],
   },
-  {
-    label: "products",
-    path: "/safety-sealers/products",
-  },
-  { label: "services", path: "/services" },
-  { label: "new & events", path: "/new&events" },
-  { label: "projects", path: "/projects" },
-  { label: "blog", path: "/blog" },
-  { label: "careers", path: "/careers" },
-  { label: "contact us", path: "/contact-us" },
+  { label: "products", path: "/safety-sealers/products" },
+  { label: "services", path: "/safety-sealers/services" },
+  { label: "news & events", path: "/safety-sealers/news-events" },
+  { label: "projects", path: "/safety-sealers/projects" },
+  { label: "blog", path: "/safety-sealers/blog" },
+  { label: "contact us", path: "/safety-sealers/contact-us" },
 ];
 
 const Navbar = () => {
-  const [isMobile] = useMediaQuery("(min-width: 60em)");
+  const [isMobile] = useMediaQuery("(min-width: 61em)");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const textSize = useBreakpointValue({ base: "sm", md: "md" });
   const iconSize = useBreakpointValue({ base: 4, md: 5 });
@@ -106,30 +109,30 @@ const Navbar = () => {
           alignItems="center"
           py={4}
         >
-          <Flex alignItems="center" gap={1}>
+          <Flex alignItems="center">
             {links.map((link, index) => (
-              <Box key={index} position="relative" textTransform="capitalize">
+              <Flex key={index} alignItems="center">
                 {link.subLinks ? (
                   <Menu>
-                    <MenuButton
-                      as={Text}
-                      variant="ghost"
-                      color="text.white"
-                      _hover={{ textDecoration: "underline" }}
-                      borderRight="2px solid #33587c"
-                    >
-                      {link.label}
+                    <MenuButton>
+                      <Text
+                        textTransform="capitalize"
+                        color="text.white"
+                        _hover={{ textDecoration: "underline" }}
+                      >
+                        {link.label}
+                      </Text>
                     </MenuButton>
                     <MenuList>
                       {link.subLinks.map((subLink, subIndex) => (
-                        <MenuItem
-                          key={subIndex}
-                          as={Link}
-                          to={subLink.path}
-                          borderBottom="2px solid gray"
-                        >
-                          {subLink.label}
-                        </MenuItem>
+                        <Box key={subIndex}>
+                          <MenuItem as={Link} to={subLink.path}>
+                            {subLink.label}
+                          </MenuItem>
+                          {subIndex < link.subLinks.length - 1 && (
+                            <Divider orientation="horizontal" />
+                          )}
+                        </Box>
                       ))}
                     </MenuList>
                   </Menu>
@@ -139,13 +142,21 @@ const Navbar = () => {
                     to={link.path}
                     color="text.white"
                     _hover={{ textDecoration: "underline" }}
-                    borderRight="2px solid #33587c"
                     p={2}
+                    textTransform="capitalize"
                   >
                     {link.label}
                   </Text>
                 )}
-              </Box>
+                {index < links.length - 1 && (
+                  <Divider
+                    orientation="vertical"
+                    height="20px"
+                    borderColor="text.white"
+                    mx={2}
+                  />
+                )}
+              </Flex>
             ))}
           </Flex>
           <Flex alignItems="center" mx={2}>
@@ -174,11 +185,7 @@ const Navbar = () => {
                     {link.subLinks ? (
                       <>
                         <AccordionButton>
-                          <Box
-                            flex="1"
-                            textAlign="left"
-                            textTransform="capitalize"
-                          >
+                          <Box flex="1" textAlign="left">
                             {link.label}
                           </Box>
                           <AccordionIcon />
@@ -190,16 +197,19 @@ const Navbar = () => {
                         >
                           <VStack align="stretch">
                             {link.subLinks.map((subLink, subIndex) => (
-                              <Text
-                                as={Link}
-                                key={subIndex}
-                                to={subLink.path}
-                                onClick={handleDrawerClose}
-                                borderBottom="1px solid gray"
-                                my=".2rem"
-                              >
-                                {subLink.label}
-                              </Text>
+                              <Box key={subIndex}>
+                                <Text
+                                  as={Link}
+                                  to={subLink.path}
+                                  onClick={handleDrawerClose}
+                                  my=".2rem"
+                                >
+                                  {subLink.label}
+                                </Text>
+                                {subIndex < link.subLinks.length - 1 && (
+                                  <Divider orientation="horizontal" />
+                                )}
+                              </Box>
                             ))}
                           </VStack>
                         </AccordionPanel>
