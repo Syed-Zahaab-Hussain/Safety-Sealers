@@ -8,12 +8,18 @@ const theme = extendTheme({
       divider: "#33587c",
     },
     background: {
-      main: "#002e5b",
+      main: "#f90201",
+      alt: "#FE302F",
+      nav: "#a50101",
       white: "#ffffff",
-      alt: "#33587c",
-      button: "#0088cc",
-      buttonHover: "#006599",
+      button: "#f90201",
+      buttonHover: "#a50101",
     },
+
+    // hero: {
+    //   main: "##FE302F",
+    //   alt: "##F90201",
+    // },
   },
   fonts: {
     heading: "Poppins, sans-serif",

@@ -104,7 +104,7 @@ const Navbar = () => {
       {isMobile && (
         <Flex
           as="header"
-          bg="background.main"
+          bg="background.nav"
           justifyContent="space-between"
           alignItems="center"
           py={4}

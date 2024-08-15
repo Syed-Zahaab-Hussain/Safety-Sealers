@@ -15,7 +15,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 const Footer = () => {
   return (
     <Box
-      bg="background.main"
+      bg="background.nav"
       minH="400px"
       w="100%"
       display="flex"
@@ -30,11 +30,13 @@ const Footer = () => {
         p={4}
       >
         <Card
-          bg="background.main"
+          bg="background.nav"
           color="text.white"
           maxWidth={["90%", "350px"]}
           w="100%"
           mb={[4, 0]}
+          border="none"
+          boxShadow="none"
         >
           <CardHeader>
             <Heading size="md">Corporate Office</Heading>
@@ -66,7 +68,7 @@ const Footer = () => {
         p={4}
       >
         <Text textAlign="center">
-          Copyright 2020 Safety Sealers. All rights reserved.
+          Copyright 2024 Safety Sealers. All rights reserved.
         </Text>
       </Flex>
     </Box>

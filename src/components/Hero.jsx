@@ -34,7 +34,7 @@ const HeroSection = () => {
 
   return (
     <Box
-      bg="#1888f1"
+      bg="background.main"
       py={10}
       //   display="flex"
       //   justifyContent="center"
@@ -52,7 +52,7 @@ const HeroSection = () => {
             px={4}
           >
             <Box
-              bg="#077ffb"
+              bg="background.alt"
               color="text.white"
               borderRadius="lg"
               p={8}

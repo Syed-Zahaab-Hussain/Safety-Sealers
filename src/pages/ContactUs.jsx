@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Box,
   Button,
@@ -6,58 +8,73 @@ import {
   FormLabel,
   FormControl,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-const ContactForm = () => (
-  <Box
-    as="form"
-    action="https://formsubmit.co/552e0bdc76bc9a93c79728eacd438b4e"
-    method="POST"
-  >
-    <Input
-      type="hidden"
-      name="_subject"
-      value="New submission from contact form"
-    />
-    <Input
-      type="hidden"
-      name="_next"
-      value={`${window.location.origin}/safety-sealers/thank-you`}
-    />
+const ContactForm = () => {
+  const navigate = useNavigate();
+  const form = useRef();
 
-    <FormControl>
-      <FormLabel>Your Name</FormLabel>
-      <Input type="text" name="name" required />
-    </FormControl>
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    <FormControl>
-      <FormLabel>Your Email</FormLabel>
-      <Input type="email" name="email" required />
-    </FormControl>
+    emailjs
+      .sendForm("service_z89g6ka", "template_v1ifufm", form.current, {
+        publicKey: "MSutFzQReGWmIBD4Q",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          navigate("/safety-sealers/thank-you");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
-    <FormControl>
-      <FormLabel>Your Phone Number</FormLabel>
-      <Input type="text" name="phone" required />
-    </FormControl>
+  return (
+    <Box as="form" ref={form} onSubmit={sendEmail} p="3rem">
+      <FormControl>
+        <FormLabel>Your Name</FormLabel>
+        <Input type="text" name="user_name" required />
+      </FormControl>
 
-    <FormControl>
-      <FormLabel>City</FormLabel>
-      <Input type="text" name="city" required />
-    </FormControl>
+      <FormControl>
+        <FormLabel>Your Email</FormLabel>
+        <Input type="email" name="user_email" required />
+      </FormControl>
 
-    <FormControl>
-      <FormLabel>Subject</FormLabel>
-      <Input type="text" name="subject" required />
-    </FormControl>
+      <FormControl>
+        <FormLabel>Your Phone Number</FormLabel>
+        <Input type="text" name="user_phone" required />
+      </FormControl>
 
-    <FormControl>
-      <FormLabel>Your Message</FormLabel>
-      <Textarea name="message" required />
-    </FormControl>
+      <FormControl>
+        <FormLabel>City</FormLabel>
+        <Input type="text" name="user_city" required />
+      </FormControl>
 
-    <Button type="submit" mt={4} colorScheme="blue">
-      Send Message
-    </Button>
-  </Box>
-);
+      <FormControl>
+        <FormLabel>Subject</FormLabel>
+        <Input type="text" name="subject" required />
+      </FormControl>
+
+      <FormControl>
+        <FormLabel>Your Message</FormLabel>
+        <Textarea name="message" required />
+      </FormControl>
+
+      <Button
+        type="submit"
+        mt={4}
+        bg="background.button"
+        color="text.white"
+        _hover={{ backgroundColor: "background.buttonHover" }}
+      >
+        Send Message
+      </Button>
+    </Box>
+  );
+};
 
 export default ContactForm;
