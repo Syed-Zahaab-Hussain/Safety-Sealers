@@ -45,20 +45,20 @@ export const differenceArray = [
 export const beforeAfterImages = [
   {
     id: 1,
-    before: "/comparisionImages/image-1-before.webp",
-    after: "/comparisionImages/image-1-after.webp",
+    before: "./comparisionImages/image-1-before.webp",
+    after: "./comparisionImages/image-1-after.webp",
     title: "Living Room Renovation",
   },
   {
     id: 2,
-    before: "/comparisionImages/image-2-before.webp",
-    after: "/comparisionImages/image-2-after.webp",
+    before: "./comparisionImages/image-2-before.webp",
+    after: "./comparisionImages/image-2-after.webp",
     title: "Living Room Renovation",
   },
   {
     id: 3,
-    before: "/comparisionImages/image-3-before.webp",
-    after: "/comparisionImages/image-3-after.webp",
+    before: "./comparisionImages/image-3-before.webp",
+    after: "./comparisionImages/image-3-after.webp",
     title: "Living Room Renovation",
   },
 ];
