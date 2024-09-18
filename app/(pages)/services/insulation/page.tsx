@@ -10,7 +10,7 @@ const Insulation = () => {
       {/* Content */}
       <div className="space-y-4">
         <p>
-          Insulation ot root' besides providing relief from cold and heat
+          Insulation ot root&#39; besides providing relief from cold and heat
           reduces the energy bills and its initial cost is justified in the end.
         </p>
 
@@ -26,15 +26,15 @@ const Insulation = () => {
 
         <p>
           While specifying or using Insulation materials it must be remembered
-          that "WEI INSUALATION IS NO INSUALATION" and utmost care has to be
-          taken to keep these materials dry. Foam concrete and gypsum absorb
-          water and their continued immersion in water or their exposion to rain
-          turn them into deterioting sponge with no insulation value. They must
-          be covered with a minimum of 1/2 thick 1:4 cement sand screed and then
-          properly waterproofed to keep their insulation value in tact.
-          Similarly all the insulation boards available in Pakistan absorbs a
-          certain percentage of moisture or water and their insulation value ( k
-          factor ) is adversely affected.
+          that &#34;WEI INSUALATION IS NO INSUALATION&#34; and utmost care has
+          to be taken to keep these materials dry. Foam concrete and gypsum
+          absorb water and their continued immersion in water or their exposion
+          to rain turn them into deterioting sponge with no insulation value.
+          They must be covered with a minimum of 1/2 thick 1:4 cement sand
+          screed and then properly waterproofed to keep their insulation value
+          in tact. Similarly all the insulation boards available in Pakistan
+          absorbs a certain percentage of moisture or water and their insulation
+          value ( k factor ) is adversely affected.
         </p>
 
         <p>

@@ -1,5 +1,3 @@
-import { Span } from "next/dist/trace";
-
 export const links = [
   { label: "home", path: "/" },
   {

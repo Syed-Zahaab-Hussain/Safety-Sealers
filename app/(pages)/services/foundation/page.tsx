@@ -17,19 +17,19 @@ const Foundation = () => {
         </p>
 
         <p className=" font-semibold italic">
-          "PROTECTION OF BUILDINGS AGAINST WATER FROM THE GROUND"
+          &#34;PROTECTION OF BUILDINGS AGAINST WATER FROM THE GROUND&#34;
         </p>
 
         <p>
           Jute based bitumen sheeting to BS6398: 1983 in 2 to 3 layers
           sandwiched in 3 to 4 coats of foundation Asphalt is specified, besides
-          3/4" to 1" of thick coats of bitumen to BS1097 and we have carried out
-          such work in various projects including Pakistan Secretariat
-          Buildings, Aiwan-e-Saddar, Telephone Exchange Building and MNA's
-          hostel in Islamabad besides State Bank buildings in Karachi, Lahore
-          Rawalpindi and Islamabad. Our prize job was Pakistan national Shipping
-          Corporation building situated at the time of construction near sea in
-          Karachi, where sea waves were striking against the walls.
+          3/4&#34; to 1&#34; of thick coats of bitumen to BS1097 and we have
+          carried out such work in various projects including Pakistan
+          Secretariat Buildings, Aiwan-e-Saddar, Telephone Exchange Building and
+          MNA&#39;s hostel in Islamabad besides State Bank buildings in Karachi,
+          Lahore Rawalpindi and Islamabad. Our prize job was Pakistan national
+          Shipping Corporation building situated at the time of construction
+          near sea in Karachi, where sea waves were striking against the walls.
         </p>
 
         <p>
@@ -40,14 +40,14 @@ const Foundation = () => {
 
         <h2 className="text-2xl font-bold pt-4">DAMPROOFING OF FOUNDATION</h2>
         <p>
-          WE produce Jute based 3.6Kg/m2 1)amp Proof course in 13" & 9" or other
-          desired // widths to BS6398: 1983, also 2 Kg/m2 Polyester inert and
-          rot proof base to BS747:1986 // type 51 J Curther modified with
-          Aluminuim foil lamination. // 'l'hese clany) courses are easy to lay
-          and can be laid on smooth surfaced foundations by // even a layman. No
-          concrete pad which is not waterproof is needed and a long life //
-          protection equaling life of the building is achieved. Leaflet is
-          enclosed.
+          WE produce Jute based 3.6Kg/m2 1)amp Proof course in 13&#34; & 9&#34;
+          or other desired // widths to BS6398: 1983, also 2 Kg/m2 Polyester
+          inert and rot proof base to BS747:1986 // type 51 J Curther modified
+          with Aluminuim foil lamination. // &#39;l&#39;hese clany) courses are
+          easy to lay and can be laid on smooth surfaced foundations by // even
+          a layman. No concrete pad which is not waterproof is needed and a long
+          life // protection equaling life of the building is achieved. Leaflet
+          is enclosed.
         </p>
       </div>
     </div>

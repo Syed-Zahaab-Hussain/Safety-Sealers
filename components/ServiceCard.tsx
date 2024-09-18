@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 interface ServiceItem {
   heading: string;
   paragraph: string;
-  text: string;
+  // text: string;
 }
 
 interface ServiceCardProps {

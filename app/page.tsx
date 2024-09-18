@@ -16,7 +16,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto text-center bg-red-500 p-7 rounded-md">
               <h1 className="text-4xl font-bold mb-4">safety sealers</h1>
               <p className="text-xl">
-                waterproofing Consultants, Engineers & Contractors Ruberiods's
+                waterproofing Consultants, Engineers & Contractors Ruberiods&#39;s
                 Contract Agent
               </p>
             </div>

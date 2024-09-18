@@ -37,10 +37,12 @@ const formSchema = z.object({
     .min(10, { message: "Message must be at least 10 characters." }),
 });
 
+type FormData = z.infer<typeof formSchema>;
+
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const form = useForm({
+  const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -52,10 +54,22 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: FormData) => {
     try {
       setIsLoading(true);
-      await emailjs.send(serviceId, templateId, data, publicKey);
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: data.name,
+          email: data.email,
+          contactNumber: data.contactNumber,
+          city: data.city,
+          subject: data.subject,
+          message: data.message,
+        } as Record<string, unknown>,
+        publicKey
+      );
       setIsLoading(false);
       router.push("/thank-you");
     } catch (error) {
@@ -154,20 +168,8 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          <Button
-            type="submit"
-            className="w-full"
-            onClick={() => setIsLoading((prev) => !prev)}
-          >
-            {/* {isLoading ? <LoadingSpinner className="text-white" /> : "Submit"} */}
-            {isLoading ? (
-              <svg
-                class="animate-spin h-5 w-5 mr-3 text-white"
-                viewBox="0 0 24 24"
-              ></svg>
-            ) : (
-              "Submit"
-            )}
+          <Button type="submit" className="w-full">
+            {isLoading ? <LoadingSpinner className="text-white" /> : "Submit"}
           </Button>
         </form>
       </Form>

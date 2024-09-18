@@ -45,8 +45,8 @@ const Navbar = () => {
             </div>
             <div className="text-gray-600">
               <p className="font-bold">Head Office</p>
-              <p>Quetta</p>
-              <p>Phone: +92 313 232389432982393</p>
+              <p>56/38-C, Jinnah Town, Quetta</p>
+              <p>Phone: +92 {process.env.NEXT_PUBLIC_PHONE_NUMBER}</p>
             </div>
           </div>
         </div>
