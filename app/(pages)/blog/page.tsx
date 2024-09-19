@@ -6,6 +6,14 @@ import {
 } from "@/components/ui/accordion";
 import { accordionArray } from "./blogContent";
 
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Blog",
+    // description: introductionText,
+  };
+}
 const Blog = () => {
   return (
     <>

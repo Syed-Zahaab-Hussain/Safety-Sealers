@@ -9,6 +9,14 @@ import {
   coreValuesText,
   qhsePolicyText,
 } from "./CompanyProfileContent";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Company Profile",
+    description: introductionText,
+  };
+}
 
 const CompanyProfile = () => {
   return (

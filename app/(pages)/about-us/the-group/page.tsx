@@ -6,6 +6,14 @@ import {
   bodyText2,
   theGroupCardsArray,
 } from "./theGroupContent";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "The Group",
+    description: introductionText,
+  };
+}
 
 const TheGroup = () => {
   return (

@@ -2,6 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { cardContent } from "./news-eventsContent";
 
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "News & Events",
+    // description: introductionText,
+  };
+}
+
 const NewsEvents = () => {
   return (
     <>

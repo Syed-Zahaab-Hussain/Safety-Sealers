@@ -20,10 +20,7 @@ export const metadata: Metadata = {
   title: "Safety Sealers",
   description:
     "waterproofing Consultants, Engineers & Contractors Ruberiods's Contract Agent",
-  // icons: "/logo/logo.png",
 };
-
-
 
 export default function RootLayout({
   children,
@@ -33,14 +30,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Navbar />
-
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
-    <WhatsappIcon/>
-        
+        <WhatsappIcon />
       </body>
     </html>
   );

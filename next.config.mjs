@@ -22,6 +22,16 @@ const nextConfig = {
         hostname: "encrypted-tbn0.gstatic.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "pictures-nigeria.jijistatic.net",
+        port: "",
+      },
     ],
   },
 };

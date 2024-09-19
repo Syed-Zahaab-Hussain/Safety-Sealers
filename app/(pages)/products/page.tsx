@@ -3,6 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { productsArray } from "./productContact";
 
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Waterproofing Solutions",
+    // description: introductionText,
+  };
+}
 const ProductPage = () => {
   return (
     <>
@@ -16,7 +24,7 @@ const ProductPage = () => {
 
       <div className="p-8 mb-8">
         <h2 className="text-2xl font-bold">Latest News and Events</h2>
-        <div className="mt-6 grid grid-cols-3">
+        <div className="mt-6 grid grid-cols-3 gap-4">
           {productsArray.map((item, index) => (
             <Link key={index} href={`/products/${item.name.replace(" ", "-")}`}>
               <Card className="max-w-[350px]">
@@ -24,13 +32,15 @@ const ProductPage = () => {
                   <CardTitle>{item.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={250}
-                    height={250}
-                    className="rounded-lg object-cover"
-                  />
+                  <div className="relative w-full h-[250px]">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="250px"
+                      className="rounded-lg object-cover"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             </Link>
